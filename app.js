@@ -5,9 +5,7 @@ const images = [
   { id: 'factory', url: 'https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80', alt: 'Factory smoke and pollution' },
   { id: 'car', url: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80', alt: 'Traffic and car exhaust' },
   { id: 'deforest', url: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80', alt: 'Deforested land' },
-  { id: 'oil', url: 'https://images.unsplash.com/photo-1496284045406-d3e0b918dbe3?auto=format&fit=crop&w=1200&q=80', alt: 'Oil industry and rigs' },
-  { id: 'ice', url: 'https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1200&q=80', alt: 'Melting ice and glacier' },
-  { id: 'wildfire', url: 'https://images.unsplash.com/photo-1501706362039-c6e809a4d0b3?auto=format&fit=crop&w=1200&q=80', alt: 'Wildfire smoke' }
+  { id: 'ice', url: 'https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1200&q=80', alt: 'Melting ice and glacier' }
 ];
 
 const mainImage = document.getElementById('mainImage');
