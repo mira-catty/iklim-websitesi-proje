@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Climate Roast Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- html2canvas for exporting the image + overlays -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNa5o3I6sPq9L1jBq6yq4oWT0iYg9j3qj2Qx0V0S6q0g7g7P6k3w8tQK3vI6gQkYk8g9n5JcB1z8vN6x3+7Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <header>
+    <h1>Climate Roast Studio</h1>
+    <p>Pick an image on the right, add a caption, drag it where you want, then export. Keep it funny — don't target private people.</p>
+  </header>
+
+  <main>
+    <section class="editor-area">
+      <div class="toolbar">
+        <label>
+          Caption text
+          <input id="captionInput" type="text" placeholder="Write something witty..." />
+        </label>
+        <button id="addCaptionBtn">Add caption</button>
+
+        <label>
+          Font size
+          <input id="fontSize" type="range" min="14" max="72" value="28" />
+        </label>
+
+        <label>
+          Color
+          <input id="fontColor" type="color" value="#ffffff" />
+        </label>
+
+        <button id="boldBtn" title="Toggle bold">B</button>
+        <button id="italicBtn" title="Toggle italic">I</button>
+
+        <button id="clearBtn">Clear captions</button>
+        <button id="downloadBtn" class="primary">Download PNG</button>
+      </div>
+
+      <div class="canvas" id="canvasRoot" aria-label="Image editor">
+        <img id="mainImage" alt="Selected climate image" crossorigin="anonymous" />
+        <div id="overlays"></div>
+      </div>
+    </section>
+
+    <aside class="sidebar" aria-label="Image selector">
+      <h2>Choose a photo</h2>
+      <div class="thumb-list" id="thumbList" tabindex="0"></div>
+    </aside>
+  </main>
+
+  <footer>
+    <small>Made for satire and awareness. Be kind and avoid doxxing or hateful speech.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
