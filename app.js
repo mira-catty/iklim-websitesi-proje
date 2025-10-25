@@ -31,6 +31,8 @@ images.forEach((it, idx) => {
   thumb.tabIndex = 0;
 
   const img = document.createElement('img');
+  // request cross-origin before setting src so canvas won't be tainted
+  img.crossOrigin = 'anonymous';
   img.src = it.url;
   img.alt = it.alt;
   img.loading = 'lazy';
@@ -44,7 +46,9 @@ images.forEach((it, idx) => {
 });
 
 function selectImage(it){
-  mainImage.src = it.url + '&' ; // leave query so cached; don't modify heavily
+  // ensure crossOrigin is set before assigning src
+  mainImage.crossOrigin = 'anonymous';
+  mainImage.src = it.url; // removed stray '&' which was unnecessary
   mainImage.alt = it.alt;
   // ensure overlays container size matches the image once loaded
   mainImage.onload = () => {
